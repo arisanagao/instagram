@@ -5,24 +5,21 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode 
+  adapter: sqlite3
   pool: 5
-  template: template0
+  timeout: 5000
 
 development:
   <<: *default
-  database: instagram_development
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: instagram_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: instagram_production
-  username: instagram
-  password: <%= ENV['INSTAGRAM_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
