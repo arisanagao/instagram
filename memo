@@ -1,0 +1,2 @@
+macでPostgreSQLを再起動
+$ brew services start postgresql
