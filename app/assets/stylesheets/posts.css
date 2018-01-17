@@ -7,14 +7,9 @@ ul.list-group {
 	text-align: right;
 }
 
-.list-group p{
+p.post {
 	text-align: left;
-        font-weight: bold;
 	word-wrap: break-word;
-}
-
-.list-group p.picture {
-        text-align: center;
 }
 
 /*# sourceMappingURL=tweets.css.map */
