@@ -8,9 +8,9 @@
         <ul class="list-group">
           <% @posts.each do |post| %>
             <li class="list-group-item">
-              <p class="post"><%= post.content %>
-              <br>
-              </p>
+              <p class="post"><%= post.user.name %>の投稿</p>
+              <%= post.content %>
+              <%= image_tag post.picture.url %>
               <%= link_to "編集", edit_post_path(post.id), class: 'btn-sm btn-success' %>
               <%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn-sm btn-danger' %>
             </li>
