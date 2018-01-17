@@ -2,16 +2,14 @@ body {
   background-color: #e7eff7;
 }
 
-.list-group {
+ul.list-group {
 	font-size: medium;
-}
-
-.list-group{
 	text-align: right;
 }
 
-.list-group p{
+p.post {
 	text-align: left;
 	word-wrap: break-word;
 }
+
 /*# sourceMappingURL=tweets.css.map */
