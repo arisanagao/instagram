@@ -1,2 +1,5 @@
-macでPostgreSQLを再起動
+・macでPostgreSQLを再起動
 $ brew services start postgresql
+
+・herokuの登録
+$ heroku git:remote --app APPNAME
