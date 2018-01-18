@@ -6,3 +6,6 @@ $ heroku git:remote --app APPNAME
 
 ・Herokuにmasterブランチ以外をデプロイする
 $ git push heroku ブランチ名:master --force
+
+・styleseetsをHerokuに反映させる
+$ rake assets:precompile RAILS_ENV=production
