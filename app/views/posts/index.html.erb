@@ -13,8 +13,10 @@
               </p>
               <div align="center"><%= image_tag post.picture.url %></div>
               <br>
-              <%= link_to "編集", edit_post_path(post.id), class: 'btn-sm btn-success' %>
-              <%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn-sm btn-danger' %>
+              <% if current_user == post.user %>
+                <%= link_to "編集", edit_post_path(post.id), class: 'btn-sm btn-success' %>
+                <%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn-sm btn-danger' %>
+               <% end %>
             </li>
           <% end %>
         </ul>
