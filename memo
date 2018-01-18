@@ -9,3 +9,7 @@ $ git push heroku ブランチ名:master --force
 
 ・styleseetsをHerokuに反映させる
 $ rake assets:precompile RAILS_ENV=production
+
+・Herokuのデータベースリセット、マイグレーション
+heroku pg:reset DATABASE
+heroku run rake db:migrate RAILS_ENV=production
