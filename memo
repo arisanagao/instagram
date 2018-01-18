@@ -5,4 +5,4 @@ $ brew services start postgresql
 $ heroku git:remote --app APPNAME
 
 ・Herokuにmasterブランチ以外をデプロイする
-$ git push heroku APPNAME:master --force
+$ git push heroku ブランチ名:master --force
