@@ -8,7 +8,12 @@
         <ul class="list-group">
           <% @posts.each do |post| %>
             <li class="list-group-item">
-              <p class="post"><%= post.user.name %>の投稿 <br>
+              <% if post.user.nil? %>
+                <p class="post">退会したユーザーの投稿
+              <% else %>
+                <p class="post"><%= post.user.name %>の投稿
+              <% end %>
+              <br>
               <strong><%= post.content %></strong>
               </p>
               <div align="center"><%= image_tag post.picture.url %></div>
@@ -16,7 +21,7 @@
               <% if current_user == post.user %>
                 <%= link_to "編集", edit_post_path(post.id), class: 'btn-sm btn-success' %>
                 <%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn-sm btn-danger' %>
-               <% end %>
+              <% end %>
             </li>
           <% end %>
         </ul>
